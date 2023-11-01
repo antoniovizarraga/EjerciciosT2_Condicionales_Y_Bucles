@@ -7,14 +7,30 @@ public class Ejercicio01 {
 	/* Vamos a realizar un script que nos diga que si un número introducido
 	 * por el usuario entre 0 y 9999, es un número capícuo o no. Los números
 	 * capícuos son aquellos que se leen igual de izquierda a derecha y vice-
-	 * -versa. */
+	 * -versa. 
+	 * 
+	 * VALORES DE PRUEBA:
+	 * 
+	 * Entrada:
+	 * 
+	 * 1212
+	 * 
+	 * Salida esperada:
+	 * 
+	 * El número es capícuo.
+	 * 
+	 * Salida obtenida:
+	 * 
+	 * El número es capícuo.
+	 * 
+	 * */
 	public static void main(String[] args) {
 		// Creamos los valores que usaremos y un valor que pediremos al usuario.
 		int num;
-		float num2;
-		int temp = 0;
-		int x;
-		final int ORIGINAL_VALUE;
+		int num2;
+		int num3;
+		int num4;
+		final int ORIGINAL_VALUE; // Esto será un valor de referencia.
 		
 		// Creamos el Scanner.
 		Scanner sc = new Scanner(System.in);
@@ -24,30 +40,11 @@ public class Ejercicio01 {
 		"0 y 9999: ");
 		num = sc.nextInt();
 		
-		/* Entramos en un bucle en el que si el usuario no mete un valor
-		 * comprendido entre 0 y 9999, le pedimos que lo vuelva a pedir. */
-		/* do {
-			if(num > 9999 || num < 0) {
-				System.out.println("Error. Introduce un valor entero " +
-				"comprendido entre el 0 y 9999.");
-				num = sc.nextInt();
-			}				
-		} while(num > 9999 || num < 0); */
-		
-		// Una vez tengamos el valor correcto...
-		
-		/* Asignamos a x el valor introducido por el usuario
-		 * para usarlo más adelante en una operación matemática. */
-		x = num;
+
 		
 		// Guardamos el valor introducido por el usuario para tenerlo de referencia.
 		ORIGINAL_VALUE = num;
 		
-		/* Hacemos un bucle en el que vaya invirtiendo el número del revés
-		 * y lo vaya guardando hasta que el valor sea menor a 0. Si lo es,
-		 * significa que ya ha metido el último valor y que ya no quedan
-		 * más valores por meter (En efecto, he buscado el método en
-		 * Stack Overflow. 😎👍 */
 		
 		// En el caso en el que el número sólo tenga un valor.
 		if(num < 10)
@@ -70,27 +67,31 @@ public class Ejercicio01 {
 			if(num == num2) {
 				System.out.println("El número es capícuo.");
 			}
-				
+			// En el caso en que el número tenga cuatro valores.
 		} else if(num < 10000 & num > 999) {
-			num2 = (int) num % 100;
-			num = num / 1000;
+			// Guarda la primera cifra del número.
+			num = (ORIGINAL_VALUE / 100) / 10;
 			
-			if(num == num2) {
+			// Guarda la segunda.
+			num2 = (ORIGINAL_VALUE / 100) % 10;
+			
+			// Guarda la tercera.
+			num3 = (ORIGINAL_VALUE % 100) / 10;
+			
+			// Y la cuarta.
+			num4 = (ORIGINAL_VALUE % 100) % 10;
+			
+			
+			// Comprueba si es capícuo.
+			if(num == num4 && num2 == num3) {
 				System.out.println("El número es capícuo.");
+			} else {
+				System.out.println("El número no es capícuo.");
 			}
 				
-		} else {
-			System.out.println("El número no es capícuo.");
-		}
+		} 
 			
-			
-		
-		/* if(temp == ORIGINAL_VALUE) {
-			System.out.println("El número es capícuo.");
-		} else {
-			System.out.println("El número no es capícuo.");
-		} */
-		
+		// Cerramos el Scanner.
 		sc.close();
 	}
 
