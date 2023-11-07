@@ -3,6 +3,52 @@ import java.util.Scanner;
 
 public class Ejercicio03 {
 
+	/* ENTRADA:
+	 * (Caso 1)
+	 * 50
+	 * 20
+	 * 100
+	 * 
+	 * (Caso 2)
+	 * 
+	 * 100
+	 * 20
+	 * 100
+	 * 
+	 * (Caso 3)
+	 * 
+	 * 100
+	 * 0
+	 * 100
+	 * 
+	 * SALIDA ESPERADA:
+	 * 
+	 * (Caso 1)
+	 * No se dispone del suficiente alimento para cada animal.
+	 * La cantidad que le corresponde a cada animal es: 2.5 Kgs.
+	 * 
+	 * (Caso 2)
+	 * 
+	 * Has alimentado a tus animales. Bien hecho.
+	 * 
+	 * (Caso 3)
+	 * 
+	 * Error. No puedes meter ceros.
+	 * 
+	 * SALIDA OBTENIDA:
+	 * 
+	 * (Caso 1)
+	 * No se dispone del suficiente alimento para cada animal.
+	 * La cantidad que le corresponde a cada animal es: 2.5 Kgs.
+	 * 
+	 * (Caso 2)
+	 * 
+	 * Has alimentado a tus animales. Bien hecho.
+	 * 
+	 * (Caso 3)
+	 * 
+	 * Error. No puedes meter ceros.
+	 *  */
 	public static void main(String[] args) {
 		int animals;
 		float totalFood, purchasedFood, correspondentFood;
@@ -33,6 +79,8 @@ public class Ejercicio03 {
 			
 			System.out.println("La cantidad que le corresponde a cada animal es: " +
 			correspondentFood + " Kgs.");
+		} else {
+			System.out.println("Has alimentado a tus animales. Bien hecho.");
 		}
 		
 		
