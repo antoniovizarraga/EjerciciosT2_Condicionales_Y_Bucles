@@ -19,9 +19,27 @@ public class Ejercicio07 {
 		System.out.println("Introduce los segundos.");
 		seconds = sc.nextInt();
 
-		if(minutes > 60 && minutes < 70) {
-			
+		seconds++;
+		
+		if(seconds > 60)
+			minutes += seconds / 60;
+		
+		if(minutes > 60)
+			hours += minutes / 60;
+		
+		
+		if(seconds == 60) {
+			minutes++;
+			seconds = 0;
 		}
+		
+		if(minutes == 60) {
+			hours++;
+			minutes = 0;
+		}
+			
+		
+		System.out.println(hours + " horas, " + minutes + " minutos y " + seconds + " segundos.");
 		
 		sc.close();
 	}
