@@ -57,6 +57,7 @@ public class Ejercicio06 {
 		else
 			System.out.println("Fallaste... El resultado de la suma era: " +
 			(RANDOM_NUM_1 + RANDOM_NUM_2));
+		sc.close();
 	}
-
+	
 }
