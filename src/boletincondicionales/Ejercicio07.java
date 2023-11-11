@@ -51,8 +51,7 @@ public class Ejercicio07 {
 			hours += minutes / 60;
 			minutes = 0;
 		}
-			
-			
+				
 		
 		System.out.println(hours + " horas, " + minutes + " minutos y " + seconds + " segundos.");
 		
