@@ -60,26 +60,33 @@ public class Ejercicio08 {
 		Scanner sc = new Scanner(System.in);
 		
 		
+		// Creamos un bloque de código a prueba de posibles errores de inputs.
 		try {
+			
+			// Le pedimos los valores correspondientes al usuario.
 			System.out.println("¿Cuánta distancia vas a recorrer? (En Kilómetros)");
 			distanceUser = sc.nextFloat();
 			
 			System.out.println("¿Cuántos días de estancia vas a tener?");
 			daysUser = sc.nextInt();
 			
+			// Calculamos el precio total del ticket.
 			trainPrice = distanceUser * PRICE_DISTANCE;
 			
+			// Calculamos si se aplicaría el descuento al ticket. En caso de ser así, aplícalo al precio y réstalo.
 			if(daysUser > REF_DAYS && distanceUser > REF_DISTANCE) {
 				trainPrice -= (trainPrice * DISCOUNT) / 100;
 			}
 			
+			// Imprime el precio final.
 			System.out.println("El precio del Ticket será de: " + trainPrice + "€.");
 		} catch(InputMismatchException e) {
+			// Si hay un error en el input, imprime este mensaje.
 			System.out.println("Has introducido un valor no válido. Vuelve a intentarlo.");
 		}
 		
 		
-		
+		// Cierra el Scanner.
 		sc.close();
 	}
 
