@@ -6,21 +6,33 @@ public class Ejercicio01 {
 
 	/*
 	 * ENTRADA:
+	 * (Caso 1)
+	 * 13
+	 * 59
+	 * 51
 	 * 
-	 * 
-	 * 
-	 * 
+	 * (Caso 2)
+	 * 13.5
 	 * 
 	 * SALIDA ESPERADA:
 	 * 
 	 * 
+	 * (Caso 1)
+	 * La cantidad total de tiempo es:
+	 * 14:00:01
 	 * 
+	 * (Caso 2)
+	 * Error. El valor introducido no fue válido. Vuelve a introducir el valor.
 	 * 
 	 * 
 	 * SALIDA OBTENIDA:
+	 * (Caso 1)
+	 * La cantidad total de tiempo es:
+	 * 14:00:01
 	 *  
-	 *  
-	 *  
+	 * (Caso 2)
+	 * Error. El valor introducido no fue válido. Vuelve a introducir el valor.
+	 * 
 	 *  */
 	public static void main(String[] args) {
 		// El valor de horas que le pediremos al usuario.
