@@ -58,12 +58,16 @@ public class Ejercicio02 {
 					// Si no es primo, detén el bucle.
 					isPrime = false;
 					break;
-				}
-			}
+				} //Fin if
+			} // Fin segundo bloque for
+			
+			
 			// Si es primo, suma 1 a la variable.
 			if(isPrime)
 				primeNumbersCount++;
-		}
+			
+			
+		} // Fin primer bucle for
 		
 		
 		// Imprimimos el resultado.
